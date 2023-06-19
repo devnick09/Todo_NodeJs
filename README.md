@@ -1,2 +1,2 @@
-# Node-js-playground
-This repository is for learning Node JS
+# Node-js-Todo-List
+This Todo list is built with Node JS and Mongo DB
