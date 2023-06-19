@@ -11,7 +11,7 @@ This Todo list is built with Node JS and Mongo DB
 </ul>
 
 ## How to run ?
-Simply clone this project and on root just run "npm start" and you'll be able to use it
+Simply clone this project and on root firstly run "npm i" and after installing node modules just run "npm start" and you'll be able to use this app.
 
 ## Featured Images
 
