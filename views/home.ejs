@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="/css/home.css">
+
+<!-- form to get input and date value -->
+<form action="/create-todo" method="post">
+    <!-- container for description -->
+    <div class="desc">
+        <label for="start">Description:</label><br>
+        <input type="text" name="desc" required placeholder="type your task.."><br/>
+    </div>
+    <!-- container for due date -->
+    <div class="date">
+        <label for="start">Due date:</label><br>
+        <div>
+            <input type="date" id="start" name="due_date" min="2022-01-01" required>
+            <!-- button to submit the form -->
+            <button class="input-btn" type="submit">
+                <i class="fa-solid fa-square-plus"></i> Add Task
+            </button>
+        </div>
+    </div>
+
+</form>
+
+<!-- horizontal line -->
+<hr>
+<!-- Todo container -->
+<div class="todo-container">
+    <ul class="todo-list">
+        <%for(let todo of todoList ) { %>
+        <div class="todo <%= todo.completed %>">
+            <li class="todo-item"><%= todo.desc %></li>
+            <div class="date-container"><p><i class="fa-regular fa-calendar"></i><%= todo.dueDate %></p></div>
+            <a href="/update-todo/?id=<%= todo._id %>&completed=<%= todo.completed %>"><button class="done-btn"><i class="fas fa-check"></i></button></a>
+            <a href="/delete-todo/?id=<%= todo._id %>"><button class="del-btn"><i class="fas fa-trash"></i></button></a>
+        </div>
+        <% } %>  
+    </ul>
+</div> 
+
